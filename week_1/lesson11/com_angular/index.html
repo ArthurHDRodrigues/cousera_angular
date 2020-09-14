@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html ng-app="MsgApp">
+    <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"> </script>
+    <script src="app.js"> </script>
+    <title>
+    Expressinons and Interpolation
+    </title>
+</head>
+<body>
+    <h1>    Expressinons and Interpolation</h1>
+    <div ng-controller='MsgController'>
+            A mensagem é <br>
+            {{sayMessage()}}
+            <div>
+                <button ng-click="turn_red()"> trocar</button>
+                <br>
+                <!--
+                Pode-se trocar atributos de tags, mas não tags em si.
+                Para evitar errors de 404, use ng-src 
+                -->
+                <img ng-src="{{img}}">
+                </img>
+                {{tag_begin}}
+                    {{msg}}
+                {{tag_end}}
+                
+            </div>
+    </div>
+
+</div>
+</body>
+</html>
